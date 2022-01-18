@@ -1,9 +1,0 @@
-@import "fonts";
-@import "variables";
-
-@mixin text($size, $ff: $primaryFont, $weight: 400, $style: normal){
-  font-family: $ff;
-  font-weight: $weight;
-  font-size: $size;
-  font-style: $style;
-}
