@@ -1,0 +1,154 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+
+.mainBlock {
+  width: 100%;
+  min-height: 100vh;
+  background-color: #fff;
+  margin-top: -4px;
+  overflow: visible;
+
+  .mainBlockCont {
+    width: $lW;
+    margin: 0 auto;
+    //background-color: #b64d4d;
+    overflow: visible;
+  }
+
+  // up
+  .upperBox {
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+    position: relative;
+  }
+
+  .upperBoxLeft {
+
+    .p1 {
+      display: block;
+      width: 635px;
+      margin: 100px 0 0 110px;
+      //background-color: #7fd9e8;
+      @include text(24px, $primaryFont, 400);
+
+      span {
+        @include text(24px, $primaryFont, 400, italic);
+      }
+    }
+
+    .p2 {
+      display: block;
+      width: 635px;
+      position: relative;
+      margin: 80px 0 0 110px;
+      //background-color: #7fd9e8;
+      @include text(26px, $primaryFont, 400);
+      z-index: 22;
+
+      span {
+        @include text(26px, $primaryFont, 400, italic);
+      }
+    }
+
+    ul {
+      margin: 35px 0 0 110px;
+      list-style-type: '-  ';
+      padding-left: 24px;
+
+      li {
+        position: relative;
+        margin-top: 25px;
+        @include text(24px, $primaryFont, 600);
+        z-index: 22;
+      }
+
+    }
+  }
+
+  // down
+  .downBox {
+    display: flex;
+    flex-direction: column;
+    align-items: end;
+    position: relative;
+  }
+
+  .downBoxRight {
+
+    .p3 {
+      margin: 100px 110px 0 0;
+      @include text(24px, $primaryFont, 400);
+      justify-content: end;
+
+      span {
+        @include text(24px, $primaryFont, 500, italic);
+      }
+    }
+
+    .p4 {
+      margin: 35px 110px 0 0;
+      @include text(24px, $primaryFont, 400);
+      justify-content: end;
+
+      span {
+        @include text(24px, $primaryFont, 400, italic);
+      }
+    }
+
+    .p5 {
+      margin: 5px 110px 0 0;
+      @include text(24px, $primaryFont, 400);
+      justify-content: end;
+
+      span {
+        @include text(24px, $primaryFont, 400, italic);
+      }
+    }
+  }
+
+  // button
+  .btn {
+    margin: 35px 377px 0 0;
+  }
+
+
+  // images
+  .upperBoxRightImg {
+    position: absolute;
+    top: 90px;
+    right: 550px;
+    min-width: 100px;
+    min-height: 100px;
+    z-index: 0;
+
+    img {
+      position: absolute;
+      transform: scale(1.25);
+    }
+
+    .person {
+      z-index: 0;
+    }
+
+    .txt {
+      z-index: 1;
+      left: -14px;
+      top: -26px;
+      transform: rotate(0.1deg) scale(1.25);
+    }
+  }
+
+  .downBoxLeftImg {
+    position: absolute;
+    min-width: 100px;
+    min-height: 100px;
+    top: -100px;
+    left: -40px;
+
+    .personL {
+      transform: scale(1.2);
+    }
+  }
+}

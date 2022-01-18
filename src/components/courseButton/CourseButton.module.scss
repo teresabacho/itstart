@@ -1,0 +1,46 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+
+.btn {
+  width: 300px;
+  height: 60px;
+  border: none;
+  @include text(24px, $primaryFont, 700);
+  background-color: $sideColor;
+  color: #fff;
+  overflow: hidden;
+  position: relative;
+  border-radius: 255px 15px 225px 15px/15px 235px 5px 275px;
+}
+
+.btn:hover {
+  text-decoration: none;
+  color: white;
+  background: #f188fc;
+}
+
+.btn:before {
+  position: absolute;
+  content: '';
+  display: inline-block;
+  top: -180px;
+  left: 0;
+  width: 30px;
+  height: 100%;
+  background-color: #fff;
+  animation: shiny-btn1 3s ease-in-out infinite;
+}
+
+.btn:active{
+  color: #f5f5f5;
+  background-color: $darkSideColor;
+}
+
+
+@keyframes shiny-btn1 {
+  0% { transform: scale(0) rotate(45deg); opacity: 0; }
+  80% { transform: scale(0) rotate(45deg); opacity: 0.5; }
+  81% { transform: scale(4) rotate(45deg); opacity: 1; }
+  100% { transform: scale(50) rotate(45deg); opacity: 0; }
+}

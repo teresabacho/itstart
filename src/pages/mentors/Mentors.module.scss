@@ -1,0 +1,57 @@
+@import "src/styles/variables";
+@import "src/styles/mixins";
+
+
+.mainBlock {
+  width: 100%;
+  margin-top: 100px;
+  margin-bottom: 100px;
+  //min-height: 100vh;
+
+  .mainBlockCont {
+    width: $lW;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: column;
+  }
+
+  .p {
+    display: block;
+    width: 635px;
+    @include text(24px, $primaryFont, 400);
+    margin: 25px 0 0 110px;
+  }
+
+  .blocksCont {
+    width: 100%;
+    margin-top: 55px;
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+
+    div {
+      width: 355px;
+      background: rgba(255, 255, 255, 0.5);
+      backdrop-filter: blur(10px);
+      padding: 29px;
+
+      border: 2px solid white;
+      //border-image-source: linear-gradient(155.13deg, #FFFFFF -33.93%, rgba(255, 255, 255, 0.57) 47.29%, rgba(255, 255, 255, 0) 115.76%);
+
+      p{
+        margin: 0;
+        @include text(18px, $primaryFont, 400);
+      }
+
+      span{
+        display: block;
+        margin-top: 5px;
+        @include text(18px, $primaryFont, 400);
+        color: rgba(38, 38, 38, 0.7);
+      }
+    }
+  }
+
+
+
+}
